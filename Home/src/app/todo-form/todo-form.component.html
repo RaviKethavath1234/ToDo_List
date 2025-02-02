@@ -1,9 +1,17 @@
-<h3 class="text-center text-primary">ToDo Application in Angular!</h3>
-<div class="row">
-    <div class="col-3">
-        <div class="form-group">
-            <label for="newTask" class="text-primary">Add new</label>
-            <input type="text" class="form-control text-primary" id="newTask" placeholder="Enter Text">
+<div class="container mt-4">
+    <h3 class="text-center text-primary">ToDo Application in Angular!</h3>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="newTask" class="text-primary">Add new</label>
+                <input type="text" class="form-control text-primary" [(ngModel)]="inputText" id="newTask" placeholder="Enter Text">
+            </div>
+        </div>
+
+        <div class="col-md-6 d-flex align-items-end gap-2">
+            <button class="btn btn-success" (click)="addForm()" [disabled]="!inputText">Add</button>
+            <button class="btn btn-warning" (click)="resetForm()">Reset</button>
         </div>
     </div>
 </div>
